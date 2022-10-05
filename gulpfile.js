@@ -109,10 +109,7 @@ export const ghpages = () => {
   return gulp.src('build')
   pipe(ghPages())
   pipe(gulp.dest('build'))
-  //ghPages.publish(path.join(process.cwd(), './build'), cb);
 }
-//export const deploy = deploy;
-
 
 //Clean
 
