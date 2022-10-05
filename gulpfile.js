@@ -12,6 +12,9 @@ import svgo from 'gulp-svgo';
 import svgstore from 'gulp-svgstore';
 import {deleteAsync} from 'del';
 import terser from 'gulp-terser';
+import ghPages from 'gh-pages';
+
+const path = require('path');
 
 // Styles
 
@@ -135,6 +138,14 @@ const watcher = () => {
   //gulp.watch('source/*.html').on('change', browser.reload);
 
 }
+
+// gh-pages
+
+ export const pages = (cb) => {
+    ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
+
 
 export const build = gulp.series(
   clean,
