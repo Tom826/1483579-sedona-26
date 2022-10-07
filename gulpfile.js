@@ -105,11 +105,11 @@ export const copy = () => {
 
 // gh-pages
 
-export const ghpages = () => {
+/*export const ghpages = () => {
   return gulp.src('build')
   pipe(ghPages())
   pipe(gulp.dest('build'))
-}
+}*/
 
 //Clean
 
